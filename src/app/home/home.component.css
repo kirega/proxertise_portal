@@ -1,0 +1,52 @@
+.banner-bg{
+    background-image: url('../../assets/img/header-bg.jpg');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size:cover;
+}   
+.navbar-brand{
+    font-family: 'Kaushan Script','Helvetica Neue','Helvetica','Arial','cursive';
+    font-size: 2.4rem;
+}
+.navbar-nav .nav-item a .btn, .btn-custom{
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: 1pt solid #f7d036;
+    color:#f7d036;
+}
+
+.navbar-nav .nav-item a .btn:hover{
+    background-color:#f7d036;
+    color: #000000;
+}
+.navbar-bg{
+    background-color: transparent;
+}
+header.masthead{
+    padding-top: 300px;
+    text-align: center;
+}
+.intro-heading{
+    font-family: 'Montserrat','Helvetica Neue','Helvetica','Arial','sans-serif';
+    font-weight: 700;
+    color: #f7d036;
+    font-size:75px;
+    line-height: 75px;
+}
+.intro-lead-in{
+    font-family: 'IBM Plex Serif', serif,'Helvetica Neue','Helvetica','Arial','sans-serif';
+    font-style: italic;
+    color: #ffffff;
+    font-size: 45px;
+}
+.btn-masthead{
+    width: 15%; 
+    height: 60px;
+    border-radius: 30px; 
+    font-size:30px;
+    font-family: 'Montserrat','Helvetica Neue','Helvetica','Arial','sans-serif';
+    font-weight: 700px;
+}
