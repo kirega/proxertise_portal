@@ -1,4 +1,114 @@
 /* You can add global styles to this file, and also import other style files */
+
 /* @import 'node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
 @import 'node_modules/bootstrap/dist/css/bootstrap-grid.min.css'; */
+
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+/*FORM styles for Sign Up and login
+And all forms in general
+*/
+
+.form-wrapper {
+
+    margin-top: 30px;
+    max-width: 100%;
+    width: 360px;
+}
+
+.form-holder {
+    font-size: .933rem;
+    border-radius: 10px;
+    background: #fff;
+    /*margin:0 auto ;*/
+    box-shadow: 0 15px 13px 0 rgba(0, 0, 0, 0.08), 0 25px 44px 0 rgba(0, 0, 0, 0.08);
+    border: 1px solid #efefef;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 55px 55px 33px 55px;
+    /* padding: 30px; */
+    cursor: auto;
+    vertical-align: baseline;
+    /*-webkit-box-shadow: 0 15px 13px 0 rgba(0, 0, 0, 0.08), 0 25px 44px 0 rgba(0, 0, 0, 0.08);*/
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row .btn {
+    margin-top: 15px;
+}
+
+.form-group input::placeholder{
+    color: #776b6b;
+}
+.form-group label {
+    color:#776b6b;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    border: none;
+    border-bottom: 1px solid #efefef;
+    border-radius: 0;
+    padding-left: 0px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: none;   
+    border-bottom: 2px solid #80bdff;
+    transition-property: border-bottom;
+    transition: 1s ease-in-out;
+}
+
+/* Image styles for*/
+
+.form-title {
+    display: block;
+    padding-bottom: 30px;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 2.5rem;
+}
+.form-title a {
+    font-family: 'Kaushan Script','Helvetica Neue','Helvetica','Arial','cursive';
+    color: #f2a62b ;
+    text-decoration:none;
+}
+.form-title a:hover{
+    text-decoration: none;
+}
+
+/* .img-logo {
+    width: 70%;
+    height: auto;
+    margin-left: 50px;
+} */
+/* 
+#animateForm {
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 0s;
+} */
+
+/* input:-webkit-autofill,textarea:-webkit-autofill,{
+    background-color: transparent !important; 
+} */
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    background-color: #fff !important; 
+    /* background-color: #fff !important; */
+  /* border: 1px solid green; */
+  /* -webkit-text-fill-color: green; */
+  /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
+  /* transition: background-color 5000s ease-in-out 0s; */
+}

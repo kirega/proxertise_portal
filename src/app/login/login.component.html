@@ -1,18 +1,18 @@
 <div class="form-wrapper mx-auto zoomIn" id="animateForm">
   <div class="form-holder">
-    <a routerLink="/">
-      <img class="img-logo mb-4" src="../../assets/img/z1.png">
-    </a>
+    <div class="form-title">
+      <a  class="" routerLink="/">Proxertise</a>
+    </div>
     <!--<h5 class="text-center title mt-2"> Login</h5>-->
     <form [formGroup]="loginForm">
-
+    <!-- <form> -->
       <div class="form-group">
-        <label> Email</label>
-        <input class="form-control" type="email" formControlName="email">
+        <!-- <label> Email</label> -->
+        <input class="form-control" type="Email" formControlName="email" placeholder="Email">
       </div>
       <div class="form-group">
-        <label> Password</label>
-        <input class="form-control" type="password" formControlName="password">
+        <!-- <label> Password</label> -->
+        <input class="form-control" type="password" formControlName="password" placeholder="Password">
       </div>
       <div *ngIf="error" class="form-row">
         <div class=" col-12 bg-danger text-center p-2">

@@ -10,6 +10,7 @@
 .navbar-brand{
     font-family: 'Kaushan Script','Helvetica Neue','Helvetica','Arial','cursive';
     font-size: 2.4rem;
+    color: #f2a62b;
 }
 .navbar-nav .nav-item a .btn, .btn-custom{
     font-size: 1.1rem;
