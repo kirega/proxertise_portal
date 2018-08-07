@@ -16,12 +16,12 @@ export class LoginComponent implements OnInit {
 
   constructor( private fb: FormBuilder,
                private auth: AuthService,
-               private nav:NavigationService
+               private nav: NavigationService
               ) {}
 
   ngOnInit() {
-    localStorage.clear()
-    this.createform()
+    localStorage.clear();
+    this.createform();
   }
 
   login(formdata) {
@@ -35,11 +35,11 @@ export class LoginComponent implements OnInit {
           this.nav.goto_index();
         },
         err => {
-          this.nav.goto_login();
+          // this.nav.goto_login();
           this.error = true;
-          console.log(err);
+          // console.log(err);
         }
-      )
+      );
   }
   createform() {
     this.loginForm = this.fb.group({
@@ -50,6 +50,6 @@ export class LoginComponent implements OnInit {
           [Validators.required]
         ]
       }
-    )
+    );
   }
 }
