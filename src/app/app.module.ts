@@ -13,6 +13,7 @@ import { AuthService } from './services/auth.service';
 import { AuthInterceptor } from './interceptors/auth.interceptors';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './dashboard/nav/nav.component';
+import { AdvertsComponent } from './dashboard/adverts/adverts.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { NavComponent } from './dashboard/nav/nav.component';
     LoginComponent,
     SignupComponent,
     DashboardComponent,
-    NavComponent
+    NavComponent,
+    AdvertsComponent
   ],
   imports: [
     BrowserModule,
