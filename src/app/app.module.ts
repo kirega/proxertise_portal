@@ -11,6 +11,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NavigationService } from './services/navigation.service';
 import { AuthService } from './services/auth.service';
 import { AuthInterceptor } from './interceptors/auth.interceptors';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavComponent } from './dashboard/nav/nav.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { AuthInterceptor } from './interceptors/auth.interceptors';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    DashboardComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

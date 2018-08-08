@@ -1,0 +1,31 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-bg-blue">
+  <div class="container">
+    <!-- <div class="row"> -->
+    <a class="navbar-brand ml-5" href="#">Proxertise</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav justify-content-between mx-auto ">
+        <li class="nav-item px-3">
+          <a class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active">Adverts</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" [routerLink]="['/']">Playlists</a>
+        </li>
+        <li class="nav-item mp-3">
+          <a class="nav-link" [routerLink]="['/']">Account</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/adverts']">{{username}}</a>
+        </li>
+      </ul>
+      <!-- </div> -->
+    </div>
+  </div>
+</nav>

@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Injectable()
-export class NavigationService{
+export class NavigationService {
   constructor(private router: Router) {}
 
-  goto_index(){
-    this.router.navigate(['/index']);
+  goto_index() {
+    this.router.navigate(['/dashboard']);
   }
   goto_login() {
     this.router.navigate(['/login']);
@@ -14,5 +14,4 @@ export class NavigationService{
   goto_signup() {
     this.router.navigate(['/login']);
   }
-
 }

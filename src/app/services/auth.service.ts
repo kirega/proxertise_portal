@@ -21,8 +21,10 @@ export class User {
 export class Signup {
   //   first_name: string;
   //   last_name: string;
+  username: string;
   email: string;
-  password: string;
+  password1: string;
+  password2: string;
 }
 @Injectable()
 export class AuthService {
@@ -34,10 +36,10 @@ export class AuthService {
   checkLoggedIn() {
     // console.log('logged ', localStorage.getItem('token'));
     if (!localStorage.getItem('token') === null) {
-      console.log('logged ', localStorage.getItem('token'));
+      // console.log('logged ', localStorage.getItem('token'));
       return true;
     } else {
-      console.log('check logged in false', localStorage.getItem('token'));
+      // console.log('check logged in false', localStorage.getItem('token'));
       return false;
     }
   }
@@ -55,7 +57,7 @@ export class AuthService {
     return this.http.post<ItemResponse>(url, user, { headers: this.headers });
   }
   signup(signup) {
-    const url = `${this.base_url}/users/users/`;
+    const url = `${this.base_url}/rest_auth/registration/`;
     return this.http.post(url, signup, { headers: this.headers });
   }
   // registerbusiness(business): Promise<any> {

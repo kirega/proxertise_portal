@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           this.nav.goto_index();
         },
         err => {
-          // this.nav.goto_login();
+          this.nav.goto_login();
           this.error = true;
           // console.log(err);
         }

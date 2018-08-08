@@ -1,3 +1,49 @@
-<p>
-  signup works!
-</p>
+<div class="form-wrapper mx-auto zoomIn" id="animateForm">
+  <div class="form-holder">
+    <div class="form-title">
+      <a routerLink="/" > Proxertise</a>
+    </div>
+    <form [formGroup]="signupForm" novalidate>
+      
+      <!-- <div class="form-group">
+        <label> First Name</label>
+        <input class="form-control" placeholder="" type="text" formControlName="first_name">
+      </div> -->
+      <div class="form-group">
+        <input class="form-control" placeholder="Username" type="text" formControlName="username">
+      </div>
+      <div class="form-group">
+        
+        <input class="form-control" placeholder="Email" type="email" formControlName="email">
+        <span *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched" class="">
+          Email is not correct
+        </span>
+      </div>
+      <div class="form-group">
+        <input class="form-control" placeholder="Password" type="password" formControlName="password1">
+      </div>
+      <div class="form-group">
+        <!-- <label> Confirm Password </label> -->
+        <input class="form-control" placeholder="Confirm" type="password" formControlName="password2">
+      </div>
+      <div *ngIf="signupForm.get('password1').value != signupForm.get('password2').value && signupForm.get('password2').touched">
+        <span> Did not match </span>
+      </div>
+      <div *ngIf="error" class="form-row">
+        <div class="bg-danger text-center p-3 ">
+          Sign up failed, that emai/username may already exist. <a routerLink="/login" >Log in</a>.
+        </div>
+      </div>
+      <div class="form-row">
+        <button type="submit" class="col btn btn-primary"
+                (click)="post_data(signupForm.value)"
+                [disabled]="!signupForm.valid || (signupForm.get('password1').value != signupForm.get('password2').value)">
+          Sign Up
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="form-footer text-center mt-2">
+    Already a registered member? <a routerLink="/login">Log in</a> now
+  </div>
+</div>
