@@ -33,7 +33,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  checkLoggedIn() {
+  checkLoggedIn(): boolean {
     // console.log('logged ', localStorage.getItem('token'));
     if (!localStorage.getItem('token') === null) {
       // console.log('logged ', localStorage.getItem('token'));
@@ -44,7 +44,8 @@ export class AuthService {
     }
   }
   getToken(): string {
-    return JSON.parse(localStorage.getItem('token'));
+    // return JSON.parse(localStorage.getItem('token'));
+    return localStorage.getItem('token');
   }
   getName(): string {
     return JSON.parse(localStorage.getItem('user'));
@@ -57,7 +58,8 @@ export class AuthService {
     return this.http.post<ItemResponse>(url, user, { headers: this.headers });
   }
   signup(signup) {
-    const url = `${this.base_url}/rest_auth/registration/`;
+    const url = `${this.base_url}/rest_auth/regi  public headers: HttpHeaders = new HttpHeaders({ 'Content-type': 'application/json' });
+    stration/`;
     return this.http.post(url, signup, { headers: this.headers });
   }
   // registerbusiness(business): Promise<any> {

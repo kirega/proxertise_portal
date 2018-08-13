@@ -36,13 +36,14 @@
 .navbar-bg-blue{
     background-color: #424248;
 }
-.nav-item .nav-link{
+.nav-link{
     font-family: 'Montserrat','Helvetica Neue','Helvetica','Arial','sans-serif';
     color: #fff;
     font-size: 1.2rem;
 }
-.nav-item{
-    height:50px;
+.nav-link{
+    height:65px;
+    
     /* border-left: 1px dashed #000000; */
     /* border-right: 1px dashed #000000; */
 
@@ -200,4 +201,19 @@ select:-webkit-autofill:focus {
   /* -webkit-text-fill-color: green; */
   /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
   /* transition: background-color 5000s ease-in-out 0s; */
+}
+
+/********
+    SECTION WRAPPER FOR THE ADVERTS AND PLAYLISTS
+****/
+.section-wrapper{
+    margin-top: 90px;
+    box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.08), 0 15px 30px 0 rgba(0, 0, 0, 0.08);
+    border: 1px solid #efefef;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 55px 55px 33px 55px;
+}
+.dashboard-bg{
+    background-color:#efefef;
 }

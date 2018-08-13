@@ -5,6 +5,7 @@ import { HomeComponent } from '../home/home.component';
 import { SignupComponent } from '../signup/signup.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { NavComponent } from '../dashboard/nav/nav.component';
+import { AdvertsComponent } from '../dashboard/adverts/adverts.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full'},
@@ -15,12 +16,12 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       {
-        path: ' ',
-        component: NavComponent
+        path: '',
+        component: AdvertsComponent
       },
       {
         path: 'adverts',
-        component: NavComponent
+        component: AdvertsComponent
       },
     ]
   }

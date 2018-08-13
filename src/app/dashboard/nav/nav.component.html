@@ -9,16 +9,22 @@
     </button>
 
     <div class="collapse navbar-collapse " id="navbarNav">
-      <ul class="navbar-nav justify-content-between mx-auto ">
-        <li class="nav-item px-3">
-          <a class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active">Adverts</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link" [routerLink]="['/']">Playlists</a>
-        </li>
-        <li class="nav-item mp-3">
-          <a class="nav-link" [routerLink]="['/']">Account</a>
-        </li>
+      <ul class="navbar-nav justify-content-between mx-auto y-0">
+        <a class="nav-link" [routerLink]="['./adverts']" routerLinkActive="router-link-active">
+          <li class="nav-item px-3 pt-2">
+              Adverts
+          </li>
+        </a>
+        <a class="nav-link" [routerLink]="['/']">
+          <li class="nav-item px-3 pt-2">
+            Playlists
+          </li>
+        </a>
+        <a class="nav-link" [routerLink]="['/']">
+          <li class="nav-item px-3 pt-2">
+            Account
+          </li>
+        </a>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">

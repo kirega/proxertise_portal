@@ -1,3 +1,7 @@
 .router-link-active{
     color: #f7d036;
+    background-color: #1f1f2d;
+}
+.navbar {
+    padding: 0px;
 }
