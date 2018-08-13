@@ -1,44 +1,16 @@
 <div class="container-fluid dashboard-bg">
   <div class="row justify-content-center">
     <div class="section-wrapper col-9 ">
-      <div class="p-3">
+      <div class="p-lg-3 p-sm-1">
         <div class="container-fluid">
           <div class="row">
             <div class="ml-auto">
               <button class="btn btn-custom"> Add Advert</button>
             </div>
           </div>
+          <router-outlet></router-outlet>
         </div>
-        <div class="container-fluid">
-          <!-- <div class="row"> -->
-            <!-- <div class="container"> -->
-              <form [formGroup]="advertForm" enctype='multipart/form-data'>
-                <div class="form-row form-group">
-                  <label class="col-2">Title</label>
-                  <div class="col-6">
-                    <input class="form-control" formControlName="title" type="text" name="title">
-                  </div>
-                </div>
-                <div class="form-row form-group">
-                  <label class="col-2">Duration</label>
-                  <input class="col-6 form-control" formControlName="duration" type="number" name="duration">
-                </div>
-                <!-- <div class="form-group">
-                  <label></label>
-                  <input class="form-control" type="text" name="title">
-                </div> -->
-                <div class=" form-row form-group">
-                  <label class="col-2">Upload</label>
-                  <input class="col-6 form-control" type="file" name="upload" (change)="readThis($event)">
-                </div>
-                <div class="form-row ">
-                    <button type="submit" class="col-3 offset-2 btn btn-custom" (click)="upload(advertForm)">Submit</button>
-                  </div>
-              </form>
-            <!-- </div> -->
-          <!-- </div> -->
-
-        </div>
+  
       </div>
     </div>
 

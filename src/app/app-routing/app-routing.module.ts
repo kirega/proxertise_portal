@@ -6,6 +6,7 @@ import { SignupComponent } from '../signup/signup.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { NavComponent } from '../dashboard/nav/nav.component';
 import { AdvertsComponent } from '../dashboard/adverts/adverts.component';
+import { AdvertFormComponent } from '../dashboard/adverts/advert-form/advert-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full'},
@@ -21,7 +22,17 @@ const routes: Routes = [
       },
       {
         path: 'adverts',
-        component: AdvertsComponent
+        component: AdvertsComponent,
+        children: [
+          {
+            path: '',
+            component: AdvertFormComponent
+          },
+          {
+            path: 'list',
+            component: AdvertFormComponent
+          },
+        ]
       },
     ]
   }

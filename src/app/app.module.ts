@@ -14,6 +14,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptors';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './dashboard/nav/nav.component';
 import { AdvertsComponent } from './dashboard/adverts/adverts.component';
+import { AdvertFormComponent } from './dashboard/adverts/advert-form/advert-form.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AdvertsComponent } from './dashboard/adverts/adverts.component';
     SignupComponent,
     DashboardComponent,
     NavComponent,
-    AdvertsComponent
+    AdvertsComponent,
+    AdvertFormComponent
   ],
   imports: [
     BrowserModule,
