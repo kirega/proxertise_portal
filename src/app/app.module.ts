@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './dashboard/nav/nav.component';
 import { AdvertsComponent } from './dashboard/adverts/adverts.component';
 import { AdvertFormComponent } from './dashboard/adverts/advert-form/advert-form.component';
+import { AdvertsListComponent } from './dashboard/adverts/adverts-list/adverts-list.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AdvertFormComponent } from './dashboard/adverts/advert-form/advert-form
     DashboardComponent,
     NavComponent,
     AdvertsComponent,
-    AdvertFormComponent
+    AdvertFormComponent,
+    AdvertsListComponent
   ],
   imports: [
     BrowserModule,

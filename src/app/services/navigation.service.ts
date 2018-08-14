@@ -14,4 +14,7 @@ export class NavigationService {
   goto_signup() {
     this.router.navigate(['/login']);
   }
+  goto_adlist() {
+    this.router.navigate(['/dashboard/adverts']);
+   }
 }

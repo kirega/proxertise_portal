@@ -5,10 +5,13 @@
         <div class="container-fluid">
           <div class="row">
             <div class="ml-auto">
-              <button class="btn btn-custom"> Add Advert</button>
+              <a [routerLink]="['./add']" routerLinkActive="router-link-active" >
+                <button class="btn btn-custom"> Add Advert</button>
+              </a>
             </div>
           </div>
           <router-outlet></router-outlet>
+          <!-- <router-outlet name='advert_list'></router-outlet> -->
         </div>
   
       </div>

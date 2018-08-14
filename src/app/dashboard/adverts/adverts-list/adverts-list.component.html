@@ -1,0 +1,25 @@
+<div class="container mt-3">
+  <table class="table table-hover ">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Title</th>
+        <th scope="col">Duration</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of list">
+        <!-- <th scope="row">1</th> -->
+        <td>{{item.title}}</td>
+        <td>{{item.duration}}</td>
+        <td>
+          <video width="225" height="125" controls>
+            <source src={{item.upload}} type="video/mp4"> 
+          </video>
+          <!-- <img src={{item.upload}}> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

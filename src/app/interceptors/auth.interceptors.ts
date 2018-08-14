@@ -1,4 +1,4 @@
-import {Injectable, Injector} from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 import {
   HttpEvent,
   HttpInterceptor,
@@ -6,11 +6,11 @@ import {
   HttpErrorResponse,
   HttpResponse
 } from '@angular/common/http';
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 // import 'rxjs/add/operator/do';
-import {tap} from 'rxjs/operators';
-import {AuthService} from '../services/auth.service';
-import {NavigationService} from '../services/navigation.service';
+import { tap } from 'rxjs/operators';
+import { AuthService } from '../services/auth.service';
+import { NavigationService } from '../services/navigation.service';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -24,22 +24,16 @@ export class AuthInterceptor implements HttpInterceptor {
 
     const auth = this.inj.get(AuthService);
     const nav = this.inj.get(NavigationService);
-    console.log('Hello');
-
-    // if (auth.checkLoggedIn()) {
-    console.log('Hello2');
     const token = auth.getToken();
-    // this.tokenHeader = JSON.stringify(`Token ${token}`);
     this.tokenHeader = `Token ${token}`;
-    console.log(this.tokenHeader);
 
-    req = req.clone({
-      setHeaders: {
-        // 'Content-type': 'application/json',
-        // 'Accept': ' application/json',
-        Authorization: this.tokenHeader,
-      }
-    });
+    if (auth.checkLoggedIn() === true) {
+      req = req.clone({
+        setHeaders: {
+          Authorization: this.tokenHeader
+        }
+      });
+    }
     return next.handle(req)
       .pipe(
         tap(
@@ -50,29 +44,14 @@ export class AuthInterceptor implements HttpInterceptor {
           },
           (error: any) => {
             if (error instanceof HttpErrorResponse) {
-              // if (error.status === 401 || error.status === 400 ) {
-              console.log('failed');
-              // this.nav.goto_login();
-              // }
+              if (error.status === 401) {
+                console.log('failed');
+                nav.goto_login();
+              }
             }
           }
         ),
       );
-    // } else {
-    //     return next.handle(req);
-    // }
-    // .do((event: HttpEvent<any>) => {
-    //     if (event instanceof HttpResponse) {
-    //     }
-    //   },
-    //   (err: any) => {
-    //     if (err instanceof HttpErrorResponse) {
-    //       if (err.status === 401) {
-    //         nav.goto_login();
-    //       }
-    //     }
-    //   }
-    // );
   }
-
 }
+

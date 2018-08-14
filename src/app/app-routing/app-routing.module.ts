@@ -7,6 +7,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { NavComponent } from '../dashboard/nav/nav.component';
 import { AdvertsComponent } from '../dashboard/adverts/adverts.component';
 import { AdvertFormComponent } from '../dashboard/adverts/advert-form/advert-form.component';
+import { AdvertsListComponent } from '../dashboard/adverts/adverts-list/adverts-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full'},
@@ -18,7 +19,13 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: AdvertsComponent
+        component: AdvertsComponent,
+        children: [
+          {
+            path: '',
+            component: AdvertsListComponent
+          },
+        ]
       },
       {
         path: 'adverts',
@@ -26,10 +33,10 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: AdvertFormComponent
+            component: AdvertsListComponent
           },
           {
-            path: 'list',
+            path: 'add',
             component: AdvertFormComponent
           },
         ]

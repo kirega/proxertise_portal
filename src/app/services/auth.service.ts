@@ -35,7 +35,7 @@ export class AuthService {
 
   checkLoggedIn(): boolean {
     // console.log('logged ', localStorage.getItem('token'));
-    if (!localStorage.getItem('token') === null) {
+    if (localStorage.getItem('token') != null) {
       // console.log('logged ', localStorage.getItem('token'));
       return true;
     } else {

@@ -13,6 +13,7 @@ import { AuthService } from '../../../services/auth.service';
 export class AdvertFormComponent implements OnInit {
   advertForm: FormGroup;
   imagefile;
+  image = false;
   error = false;
   constructor(
     private fb: FormBuilder,
@@ -33,6 +34,10 @@ export class AdvertFormComponent implements OnInit {
   }
   readThis(inputValue): void {
     const file: File = inputValue.target.files[0];
+    console.log(typeof(file.name));
+    if (file.name.indexOf('image')) {
+      this.image = true;
+    }
     const myReader: FileReader = new FileReader();
     myReader.onloadend = (e) => {
       this.imagefile = myReader.result;
@@ -48,6 +53,7 @@ export class AdvertFormComponent implements OnInit {
       .subscribe(
         data => {
           console.log(data);
+          this.nav.goto_adlist();
         },
         error => {
           console.log(error);
@@ -63,5 +69,9 @@ export class AdvertFormComponent implements OnInit {
       upload: ['', [Validators.required]],
       user: [this.auth.getId(), ]
     });
+  }
+  reset() {
+    this.createForm();
+    this.nav.goto_adlist();
   }
 }

@@ -1,22 +1,22 @@
 <div class="container">
-    <form [formGroup]="advertForm" enctype='multipart/form-data'>
-      <div class="form-row form-group">
-        <label class="col-2">Title</label>
-        <div class="col-6">
-          <input class="form-control" formControlName="title" type="text" name="title">
-        </div>
+  <form [formGroup]="advertForm" enctype='multipart/form-data'>
+    <div class="form-row form-group">
+      <label class="col-2">Title</label>
+      <div class="col-6">
+        <input class="form-control" formControlName="title" type="text" name="title">
       </div>
-      <div class="form-row form-group">
-        <label class="col-2">Duration</label>
-        <input class="col-6 form-control" formControlName="duration" type="number" name="duration">
-      </div>
-      <div class=" form-row form-group">
-        <label class="col-2">Upload</label>
-        <input class="col-6 form-control" type="file" name="upload" (change)="readThis($event)">
-      </div>
-      <div class="form-row">
-        <button type="submit" class="col-2 offset-1 btn btn-danger" (click)="reset()">Close</button>
-        <button type="submit" class="col-2 offset-1 btn btn-custom" (click)="upload(advertForm)">Submit</button>
-      </div>
-    </form>
-  </div>
+    </div>
+    <div class=" form-row form-group">
+      <label class="col-2">Upload</label>
+      <input class="col-6 form-control" type="file" name="upload" (change)="readThis($event)">
+    </div>
+    <div *ngIf="image" class="form-row form-group">
+      <label class="col-2">Duration</label>
+      <input class="col-6 form-control" formControlName="duration" type="number" name="duration">
+    </div>
+    <div class="form-row">
+      <button type="submit" class="col-2 offset-1 btn btn-danger" (click)="reset()">Close</button>
+      <button type="submit" class="col-2 offset-1 btn btn-custom" (click)="upload(advertForm)">Submit</button>
+    </div>
+  </form>
+</div>
