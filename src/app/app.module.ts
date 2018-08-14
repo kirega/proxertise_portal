@@ -16,6 +16,7 @@ import { NavComponent } from './dashboard/nav/nav.component';
 import { AdvertsComponent } from './dashboard/adverts/adverts.component';
 import { AdvertFormComponent } from './dashboard/adverts/advert-form/advert-form.component';
 import { AdvertsListComponent } from './dashboard/adverts/adverts-list/adverts-list.component';
+import { PlaylistComponent } from './dashboard/playlist/playlist.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AdvertsListComponent } from './dashboard/adverts/adverts-list/adverts-l
     NavComponent,
     AdvertsComponent,
     AdvertFormComponent,
-    AdvertsListComponent
+    AdvertsListComponent,
+    PlaylistComponent
   ],
   imports: [
     BrowserModule,
