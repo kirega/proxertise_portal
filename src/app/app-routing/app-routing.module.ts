@@ -10,6 +10,7 @@ import { AdvertFormComponent } from '../dashboard/adverts/advert-form/advert-for
 import { AdvertsListComponent } from '../dashboard/adverts/adverts-list/adverts-list.component';
 import { PlaylistComponent } from '../dashboard/playlist/playlist.component';
 import { PlaylistListComponent } from '../dashboard/playlist/playlist-list/playlist-list.component';
+import { PlaylistAddComponent } from '../dashboard/playlist/playlist-add/playlist-add.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
@@ -53,6 +54,10 @@ const routes: Routes = [
           {
             path: '',
             component: PlaylistListComponent
+          },
+          {
+            path: 'add',
+            component: PlaylistAddComponent
           }
         ]
       }
