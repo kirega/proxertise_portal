@@ -17,4 +17,7 @@ export class NavigationService {
   goto_adlist() {
     this.router.navigate(['/dashboard/adverts']);
    }
+  goto_playlist() {
+    this.router.navigate(['/dashboard/playlists/']);
+  }
 }

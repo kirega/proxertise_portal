@@ -18,6 +18,7 @@ import { AdvertFormComponent } from './dashboard/adverts/advert-form/advert-form
 import { AdvertsListComponent } from './dashboard/adverts/adverts-list/adverts-list.component';
 import { PlaylistComponent } from './dashboard/playlist/playlist.component';
 import { PlaylistListComponent } from './dashboard/playlist/playlist-list/playlist-list.component';
+import { UtilsService } from './services/utils.service';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { PlaylistListComponent } from './dashboard/playlist/playlist-list/playli
   providers: [
     NavigationService,
     AuthService,
+    UtilsService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
