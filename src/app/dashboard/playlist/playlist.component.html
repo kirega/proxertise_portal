@@ -1,3 +1,21 @@
-<p>
-  playlist works!
-</p>
+<div class="container-fluid dashboard-bg">
+  <div class="row justify-content-center">
+    <div class="section-wrapper col-9 ">
+      <div class="p-lg-3 p-sm-1">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="ml-auto">
+              <a [routerLink]="['./add']">
+                <button class="btn btn-custom"> Add Playlist</button>
+              </a>
+            </div>
+          </div>
+          <router-outlet></router-outlet>
+          <!-- <router-outlet name='advert_list'></router-outlet> -->
+        </div>
+  
+      </div>
+    </div>
+
+  </div>
+</div>
