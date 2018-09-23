@@ -1,0 +1,42 @@
+<!-- <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Select your ads</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="done()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> -->
+      <!-- <div class="modal-body"> -->
+        <h2 mat-dialog-title>Select your ads</h2>
+        <div mat-dialog-content>
+          <table class="table table-hover">
+            <thead>
+              <tr class="d-flex">
+                <th class="col-2" scope="col"></th>
+                <th class="col-6" scope="col">Advert</th>
+                <th class="col-2 " scope="col">Duration</th>
+                <th class="col-2" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="d-flex" *ngFor="let i of playlist" >
+                <td class="col-2"></td>
+                <td class="col-6">{{i.title}}</td>
+                <td class="col-2">{{i.duration}}</td> 
+                <td class="col-2">
+                  <button  class="btn btn-primary" (click)="addToPlaylist(i.id)">
+                    <i class="material-icons">
+                      playlist_add</i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <!-- </div> -->
+      <div  mat-dialog-actions class="">
+        <button class="btn btn-primary" (click)="done()">Done</button>
+        <!-- <button class="btn btn-danger" >Yes</button> -->
+      </div>
+    <!-- </div> -->
+  <!-- </div> -->

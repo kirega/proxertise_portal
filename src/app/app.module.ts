@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule, MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -19,9 +20,8 @@ import { AdvertsListComponent } from './dashboard/adverts/adverts-list/adverts-l
 import { PlaylistComponent } from './dashboard/playlist/playlist.component';
 import { PlaylistListComponent } from './dashboard/playlist/playlist-list/playlist-list.component';
 import { UtilsService } from './services/utils.service';
-import { PlaylistAddComponent } from './dashboard/playlist/playlist-add/playlist-add.component';
-
-
+import { PlaylistAddComponent, PlaylistAddModalComponent } from './dashboard/playlist/playlist-add/playlist-add.component';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,14 +35,18 @@ import { PlaylistAddComponent } from './dashboard/playlist/playlist-add/playlist
     AdvertsListComponent,
     PlaylistComponent,
     PlaylistListComponent,
-    PlaylistAddComponent
+    PlaylistAddComponent,
+    PlaylistAddModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    OwlDateTimeModule, OwlNativeDateTimeModule
   ],
   providers: [
     NavigationService,
@@ -52,7 +56,16 @@ import { PlaylistAddComponent } from './dashboard/playlist/playlist-add/playlist
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
+    },
+    {
+      provide: MAT_DIALOG_DATA, useValue: { hasBackdrop: false }
+    },
+    {
+      provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false }
     }
+  ],
+  entryComponents: [
+    PlaylistAddModalComponent
   ],
   bootstrap: [AppComponent]
 })
