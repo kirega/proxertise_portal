@@ -32,5 +32,7 @@ export class UtilsService {
         // )
 
     }
-
+    postList(url, data): Observable<any> {
+        return this.http.post(url, data);
+    }
 }

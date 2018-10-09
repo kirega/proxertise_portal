@@ -20,4 +20,7 @@ export class NavigationService {
   goto_playlist() {
     this.router.navigate(['/dashboard/playlists/']);
   }
+  goto_playlist_detail(id) {
+    this.router.navigate(['/dashboard/playlists/detail/' + id]);
+  }
 }

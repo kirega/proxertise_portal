@@ -6,20 +6,34 @@
         <input class="form-control" formControlName="name" type="text" name="name">
       </div>
     </div>
-    <div class=" form-row form-group">
+    <div class="form-row form-group" >
       <label class="col-2">Start Date</label>
-      <input class="col-6 form-control" formControlName="start_date" type="text" name="start_date">
+      <div class="col-6" data-target-input='nearest' NgTempusdominusBootstrap>
+          <input
+          class=" form-control" 
+          formControlName="start_date"
+          type="text"
+          [options]='{"format":"YYYY-MM-DD HH:mm"}'
+          NgTempusdominusBootstrapInput
+          name="start_date"/>
+      </div>
     </div>
     <div class=" form-row form-group">
       <label class="col-2">Stop Date</label>
-      <input class="col-6 form-control" type="text" formControlName="stop_date" name="stop_date">
+      <input
+        class="col-6 form-control" 
+        formControlName="stop_date"
+        type="text"
+        [options]='{"format":"YYYY-MM-DD HH:mm"}'
+        NgTempusdominusBootstrapInput
+        name="stop_date"/>
     </div>
     <div *ngIf="image" class="form-row form-group">
       <label class="col-2">Duration</label>
       <input class="col-6 form-control" formControlName="duration" type="number" name="duration">
     </div>
     <div>
-      <label>Add adverts to this playlist</label>
+      <label>Adverts in this playlist</label>
       <table class="table table-hover">
         <thead>
           <tr class="d-flex">
@@ -92,7 +106,7 @@
     </div>
 
     <div class="form-row">
-      <button type="submit" class="col-2 mr-auto btn btn-custom" (click)="upload(advertForm)">Submit</button>
+      <button type="submit" class="col-2 mr-auto btn btn-custom" (click)="upload(playlistForm.value)">Submit</button>
     </div>
   </form>
 </div>

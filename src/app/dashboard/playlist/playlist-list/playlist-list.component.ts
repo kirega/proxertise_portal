@@ -25,7 +25,6 @@ export class PlaylistListComponent implements OnInit {
       .subscribe(
         data => {
           this.list = data;
-          console.log(data);
         },
         (error: any) => {
           if (error instanceof HttpErrorResponse) {
@@ -53,8 +52,8 @@ export class PlaylistListComponent implements OnInit {
     this.nav.goto_playlist();
   }
 
-  show(id: any) {
-    console.log(id);
+  openDetail(id: any) {
+    this.nav.goto_playlist_detail(id);
   }
 
 }

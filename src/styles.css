@@ -6,49 +6,65 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css';
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-@import "~ng-pick-datetime/assets/style/picker.min.css";
+@import '../node_modules/font-awesome/css/font-awesome.css';
 
+/******
+BODY STYLES
+********/
+body {
+  font-size: 0.9rem;
+}
 
 /*****
     NAV BAR
 ******/
-.navbar-brand{
-    font-family: 'Kaushan Script','Helvetica Neue','Helvetica','Arial','cursive';
-    font-size: 2.4rem;
-    color: #f2a62b;
-}
-.navbar-nav .nav-item a .btn,
-.btn-custom{
-    font-size: 1.1rem;
-    background-color: transparent;
-    border: 1pt solid #f7d036;
-    color:#f7d036;
+.navbar-brand {
+  font-family: 'Kaushan Script', 'Helvetica Neue', 'Helvetica', 'Arial', 'cursive';
+  font-size: 2.4rem;
+  color: #f2a62b;
 }
 
-.navbar-nav .nav-item a .btn:hover{
-    background-color:#f7d036;
-    color: #000000;
+.navbar-nav .nav-item a .btn,
+.btn-custom {
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1pt solid #f7d036;
+  color: #f7d036;
 }
-.navbar-bg{
-    background-color: transparent;
+
+.navbar-nav .nav-item a .btn,
+.btn-custom:hover {
+  background-color: #f7d036;
+  color: #000000;
+}
+
+.navbar-nav .nav-item a .btn:hover {
+  background-color: #f7d036;
+  color: #000000;
+}
+
+.navbar-bg {
+  background-color: transparent;
 }
 
 /****
     NAV DASHBOARD
 *****/
-.navbar-bg-blue{
-    background-color: #424248;
+.navbar-bg-blue {
+  background-color: #424248;
 }
-.nav-link{
-    font-family: 'Montserrat','Helvetica Neue','Helvetica','Arial','sans-serif';
-    color: #fff;
-    font-size: 1.2rem;
+
+.nav-link {
+  font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  color: #fff;
+  font-size: 1.2rem;
 }
-.nav-link{
-    height:65px;
-    
-    /* border-left: 1px dashed #000000; */
-    /* border-right: 1px dashed #000000; */
+
+.nav-link {
+  height: 65px;
+
+  /* border-left: 1px dashed #000000; */
+  /* border-right: 1px dashed #000000; */
 
 }
 
@@ -56,40 +72,43 @@
 /******
     HOME BANNER
 *****/
-.banner-bg{
-    background-image: url('assets/img/header-bg.jpg');
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size:cover;
-}   
+.banner-bg {
+  background-image: url('assets/img/header-bg.jpg');
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
 
-header.masthead{
-    padding-top: 300px;
-    text-align: center;
+header.masthead {
+  padding-top: 300px;
+  text-align: center;
 }
-.intro-heading{
-    font-family: 'Montserrat','Helvetica Neue','Helvetica','Arial','sans-serif';
-    font-weight: 700;
-    color: #f7d036;
-    font-size:75px;
-    line-height: 75px;
+
+.intro-heading {
+  font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 700;
+  color: #f7d036;
+  font-size: 75px;
+  line-height: 75px;
 }
-.intro-lead-in{
-    font-family: 'IBM Plex Serif', serif,'Helvetica Neue','Helvetica','Arial','sans-serif';
-    font-style: italic;
-    color: #ffffff;
-    font-size: 45px;
+
+.intro-lead-in {
+  font-family: 'IBM Plex Serif', serif, 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  font-style: italic;
+  color: #ffffff;
+  font-size: 45px;
 }
-.btn-masthead{
-    width: 15%; 
-    height: 60px;
-    border-radius: 30px; 
-    font-size:30px;
-    font-family: 'Montserrat','Helvetica Neue','Helvetica','Arial','sans-serif';
-    font-weight: 700px;
+
+.btn-masthead {
+  width: 15%;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 30px;
+  font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 700px;
 }
 
 
@@ -102,75 +121,78 @@ header.masthead{
 
 
 .form-wrapper {
-    margin-top: 30px;
-    max-width: 100%;
-    width: 360px;
+  margin-top: 30px;
+  max-width: 100%;
+  width: 360px;
 }
 
 .form-holder {
-    font-size: .933rem;
-    border-radius: 10px;
-    background: #fff;
-    /*margin:0 auto ;*/
-    box-shadow: 0 15px 13px 0 rgba(0, 0, 0, 0.08), 0 25px 44px 0 rgba(0, 0, 0, 0.08);
-    border: 1px solid #efefef;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 55px 55px 33px 55px;
-    /* padding: 30px; */
-    cursor: auto;
-    vertical-align: baseline;
-    /*-webkit-box-shadow: 0 15px 13px 0 rgba(0, 0, 0, 0.08), 0 25px 44px 0 rgba(0, 0, 0, 0.08);*/
+  font-size: .933rem;
+  border-radius: 10px;
+  background: #fff;
+  /*margin:0 auto ;*/
+  box-shadow: 0 15px 13px 0 rgba(0, 0, 0, 0.08), 0 25px 44px 0 rgba(0, 0, 0, 0.08);
+  border: 1px solid #efefef;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 55px 55px 33px 55px;
+  /* padding: 30px; */
+  cursor: auto;
+  vertical-align: baseline;
+  /*-webkit-box-shadow: 0 15px 13px 0 rgba(0, 0, 0, 0.08), 0 25px 44px 0 rgba(0, 0, 0, 0.08);*/
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form-row .btn {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
-.form-group input::placeholder{
-    color: #776b6b;
+.form-group input::placeholder {
+  color: #776b6b;
 }
+
 .form-group label {
-    color:#776b6b;
-    margin-bottom: 5px;
+  color: #776b6b;
+  margin-bottom: 5px;
 }
 
 .form-group input,
 .form-group textarea {
-    border: none;
-    border-bottom: 1px solid #efefef;
-    border-radius: 0;
-    padding-left: 0px;
+  border: none;
+  border-bottom: 1px solid #efefef;
+  border-radius: 0;
+  padding-left: 0px;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    box-shadow: none;   
-    border-bottom: 2px solid #80bdff;
-    transition-property: border-bottom;
-    transition: 1s ease-in-out;
+  box-shadow: none;
+  border-bottom: 2px solid #80bdff;
+  transition-property: border-bottom;
+  transition: 1s ease-in-out;
 }
 
 /* Image styles for*/
 
 .form-title {
-    display: block;
-    padding-bottom: 30px;
-    text-align: center;
-    line-height: 1.2;
-    font-size: 2.5rem;
+  display: block;
+  padding-bottom: 30px;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 2.5rem;
 }
+
 .form-title a {
-    font-family: 'Kaushan Script','Helvetica Neue','Helvetica','Arial','cursive';
-    color: #f2a62b ;
-    text-decoration:none;
+  font-family: 'Kaushan Script', 'Helvetica Neue', 'Helvetica', 'Arial', 'cursive';
+  color: #f2a62b;
+  text-decoration: none;
 }
-.form-title a:hover{
-    text-decoration: none;
+
+.form-title a:hover {
+  text-decoration: none;
 }
 
 /* .img-logo {
@@ -189,16 +211,14 @@ header.masthead{
 } */
 /* Change autocomplete styles in WebKit */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    background-color: #fff !important; 
-    /* background-color: #fff !important; */
+  background-color: #fff !important;
+  /* background-color: #fff !important; */
   /* border: 1px solid green; */
   /* -webkit-text-fill-color: green; */
   /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
@@ -208,14 +228,16 @@ select:-webkit-autofill:focus {
 /********
     SECTION WRAPPER FOR THE ADVERTS AND PLAYLISTS
 ****/
-.section-wrapper{
-    margin-top: 90px;
-    box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.08), 0 15px 30px 0 rgba(0, 0, 0, 0.08);
-    border: 1px solid #efefef;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 55px 55px 33px 55px;
+.section-wrapper {
+  margin-top: 90px;
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.08), 0 15px 30px 0 rgba(0, 0, 0, 0.08);
+  border: 1px solid #efefef;
+  background-color: #fff;
+  border-radius: 10px;
+  /* padding: 55px 55px 33px 55px; */
+  padding: 15px 10px 5px 10px;
 }
-.dashboard-bg{
-    background-color:#efefef;
+
+.dashboard-bg {
+  background-color: #efefef;
 }
