@@ -11,6 +11,7 @@ import { AdvertsListComponent } from '../dashboard/adverts/adverts-list/adverts-
 import { PlaylistComponent } from '../dashboard/playlist/playlist.component';
 import { PlaylistListComponent } from '../dashboard/playlist/playlist-list/playlist-list.component';
 import { PlaylistAddComponent } from '../dashboard/playlist/playlist-add/playlist-add.component';
+import { PlaylistDetailComponent } from '../dashboard/playlist/playlist-detail/playlist-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
@@ -58,6 +59,10 @@ const routes: Routes = [
           {
             path: 'add',
             component: PlaylistAddComponent
+          },
+          {
+            path: 'detail/:id',
+            component: PlaylistDetailComponent
           }
         ]
       }

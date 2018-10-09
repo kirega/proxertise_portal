@@ -1,0 +1,102 @@
+<div class="container">
+  <form [formGroup]="playlistDetailForm">
+    <div class="form-row form-group">
+      <label class="col-2">Title</label>
+      <div class="col-6">
+        <input class="form-control" formControlName="name" type="text" name="name">
+      </div>
+    </div>
+    <div class="form-row form-group">
+      <label class="col-2">Start Date</label>
+      <div class="col-6" data-target-input='nearest' NgTempusdominusBootstrap>
+        <input class=" form-control" formControlName="start_date" type="text" [options]='{"format":"YYYY-MM-DD HH:mm"}'
+          NgTempusdominusBootstrapInput name="start_date" />
+      </div>
+    </div>
+    <div class=" form-row form-group">
+      <label class="col-2">Stop Date</label>
+      <input class="col-6 form-control" formControlName="stop_date" type="text" [options]='{"format":"YYYY-MM-DD HH:mm"}'
+        NgTempusdominusBootstrapInput name="stop_date" />
+    </div>
+    <div *ngIf="image" class="form-row form-group">
+      <label class="col-2">Duration</label>
+      <input class="col-6 form-control" formControlName="duration" type="number" name="duration">
+    </div>
+    <div>
+      <label>Add adverts to this playlist</label>
+      <table class="table table-hover">
+        <thead>
+          <tr class="d-flex">
+            <th class="col-2" scope="col"></th>
+            <th class="col-2" scope="col"></th>
+            <th class="col-6" scope="col">Advert</th>
+            <th class="col-2 " scope="col">Duration</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="selectedPlaylist != null || selectedPlaylist != undefined">
+          <tr *ngFor="let item of selectedPlaylist" class="d-flex">
+            <td class="col-2"></td>
+            <td class="col-2"></td>
+            <td class="col-6">{{item.title}}</td>
+            <td class="col-2">{{item.duration}}</td>
+          </tr>
+        </tbody>
+        <tbody *ngIf="selectedPlaylist == null || selectedPlaylist == undefined">
+          No added list
+        </tbody>
+      </table>
+    </div>
+    <div class="form-row form-group">
+      <!-- <button type="button" data-toggle="modal" data-target="#addPlaylistAd" class="btn btn-secondary ml-auto col-2"
+      (click)="fetchList()" >Add</button> -->
+      <button type="button" data-toggle="modal" class="btn btn-custom ml-auto col-2" (click)="openModal()">Add</button>
+    </div>
+
+    <!-- The adverts add modal form to display -->
+    <div class="modal fade" id="addPlaylistAd" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Select your ads</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="done()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-hover">
+              <thead>
+                <tr class="d-flex">
+                  <th class="col-2" scope="col"></th>
+                  <th class="col-6" scope="col">Advert</th>
+                  <th class="col-2 " scope="col">Duration</th>
+                  <th class="col-2" scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="d-flex" *ngFor="let i of playlist">
+                  <td class="col-2"></td>
+                  <td class="col-6">{{i.title}}</td>
+                  <td class="col-2">{{i.duration}}</td>
+                  <td class="col-2">
+                    <button class="btn btn-primary" (click)="addToPlaylist(i.id)">
+                      <i class="material-icons">
+                        playlist_add</i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-dismiss="modal" (click)="done()">Done</button>
+            <!-- <button class="btn btn-danger" >Yes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <button type="submit" class="col-2 mr-auto btn btn-custom" (click)="upload(playlistForm.value)">Submit</button>
+    </div>
+  </form>
+</div>

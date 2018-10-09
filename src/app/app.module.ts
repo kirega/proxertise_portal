@@ -21,7 +21,10 @@ import { PlaylistComponent } from './dashboard/playlist/playlist.component';
 import { PlaylistListComponent } from './dashboard/playlist/playlist-list/playlist-list.component';
 import { UtilsService } from './services/utils.service';
 import { PlaylistAddComponent, PlaylistAddModalComponent } from './dashboard/playlist/playlist-add/playlist-add.component';
-import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { DatePipe } from '@angular/common';
+import {NgTempusdominusBootstrapModule} from 'ngx-tempusdominus-bootstrap';
+import { PlaylistDetailComponent } from './dashboard/playlist/playlist-detail/playlist-detail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +39,8 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     PlaylistComponent,
     PlaylistListComponent,
     PlaylistAddComponent,
-    PlaylistAddModalComponent
+    PlaylistAddModalComponent,
+    PlaylistDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,12 +50,13 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    OwlDateTimeModule, OwlNativeDateTimeModule
+    NgTempusdominusBootstrapModule,
   ],
   providers: [
     NavigationService,
     AuthService,
     UtilsService,
+    DatePipe,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
